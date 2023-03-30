@@ -20,11 +20,13 @@ ArrayList *createList(void) {
 }
 
 void append(ArrayList * l, void * data){
-  if(l->data[l->size-1]!=NULL){
+  /*if(l->data[l->size-1]!=NULL){
     l->size=l->size*2;
     l->data=realloc(l->data,sizeof(void)*l->size);
   }
   l->data[l->size-1]=data;
+  */
+
 }
 
 void push(ArrayList * l, void * data, int i){
