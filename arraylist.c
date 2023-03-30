@@ -63,10 +63,12 @@ void* get(ArrayList * l, int i){
 }
 
 int get_size(ArrayList * l){
-    return l->size;
+  return l->size;
 }
 
 //remove elements
 void clean(ArrayList * l){
-    
+  l->size=0;
+  l->capacity=2;
+  l->data=realloc(l->data,l->capacity*sizeof(void));
 }
