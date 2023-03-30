@@ -41,11 +41,11 @@ void push(ArrayList * l, void * data, int i){
 }
 
 void* pop(ArrayList * l, int i){
+  if(l->size==0) return NULL;
   if(i<0){
     i=l->size+i;
   }
   void *dato=l->data[i];
-
   for(int j=i; j < l->size ; j++){
     l->data[j]=l->data[j+1];
   }
