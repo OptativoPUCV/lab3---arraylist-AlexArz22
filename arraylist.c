@@ -23,6 +23,7 @@ void append(ArrayList * l, void * data){
   if(l->size==l->capacity){
     l->capacity=l->capacity*2;
     l->data=realloc(l->data,sizeof(void)*l->capacity);
+    if(l->data==NULL) return exit(EXIT_FAILURE);
   }
   l->data[l->size]=data;
   l->size++;
@@ -32,7 +33,8 @@ void push(ArrayList * l, void * data, int i){
   if(i>l->size) return;
   if(l->size==l->capacity){
     l->capacity=l->capacity*2;
-    l->data=realloc(l->data,sizeof(void)*l->capacity);    
+    l->data=realloc(l->data,sizeof(void)*l->capacity);
+    if(l->data==NULL) return exit(EXIT_FAILURE);
   }
   for(int j=l->size; j>i; j--){
     l->data[j]=l->data[j-1];
