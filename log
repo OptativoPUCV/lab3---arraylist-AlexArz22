@@ -149,3 +149,14 @@ Thu 30 Mar 2023 05:01:13 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 dc54926
+Thu 30 Mar 2023 05:02:03 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘get’:
+arraylist.c:52:25: error: returning ‘int’ from a function with return type ‘void *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   52 |   if(i<0) return l->size-i;
+      |                  ~~~~~~~^~
+cc1: all warnings being treated as errors
+Compilation failed
+27a7e22
