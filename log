@@ -73,3 +73,16 @@ Thu 30 Mar 2023 04:31:11 PM UTC:
  tests:  0|6
 total_score: 0/70
 7aa9f63
+Thu 30 Mar 2023 04:31:23 PM UTC: 
+ arraylist.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:16:20: error: expected ‘;’ before ‘lista’
+   16 |   lista->capacity=2
+      |                    ^
+      |                    ;
+   17 |   lista->data=malloc(lista->capacity * sizeof(void));
+      |   ~~~~~             
+Compilation failed
+4af931a
