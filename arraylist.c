@@ -73,7 +73,6 @@ void clean(ArrayList * l){
     l->data[i]=NULL;
   }
   l=createList();
-  l->size=0;
   l->capacity=2;
   l->data=realloc(l->data,l->capacity*sizeof(void));
 }
